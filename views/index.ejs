@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.js"></script>
+    <script src="/javascripts/synaptic_js.js"></script>
+  </head>
+  <body>
+    <table>
+      <% for(var i=0; i<10; i++) {%>
+      <tr>
+        <% for(var j=0; j<6; j++) {%>
+          <td id="<%=i%><%=j%>" onclick='marcar("<%=i%>","<%=j%>")'></td>
+        <% } %>
+      </tr>
+      <% } %>
+    </table>
+    <br>
+      <input type="text" name="" id="numero">
+      <br>
+      <button onclick="train()">Train</button>
+      <br>
+      <button onclick="check()">Check</button>
+      <br>
+      <button onclick="clear()">Clear</button>
+
+  </body>
+</html>
